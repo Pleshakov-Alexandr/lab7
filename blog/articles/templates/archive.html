@@ -1,0 +1,44 @@
+<!--{% load static %}-->
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/style2.css">
+    <title>Архив статей</title>
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="content_header">
+            <div class="header-block">
+                <p class="header-title">Django public blog</p>
+            </div>
+            <div class="new_post_block">
+                <a href="/article/new" class="add_post">Создать статью</a>
+            </div>
+        </div>
+    </header>
+    <div class="archive">
+        {% for post in posts %}
+        <div class="one-post">
+            <div class="title-block">
+                <a href="article/{{ post.id }} " class="post-title">
+                    <h2>{{ post.title }}</h2>
+                </a>
+            </div>
+            <div class="article-info">
+                <div class="article-author">{{ post.author }}</div>
+                <div class="article-created-date">{{ post.created_date }}</div>
+            </div>
+            <p class="article-text">{{ post.get_excerpt }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
