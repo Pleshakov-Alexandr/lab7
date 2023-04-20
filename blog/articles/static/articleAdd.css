@@ -11,11 +11,26 @@ body {
    align-items: center;
 }
 
+h1 {
+   color: white;
+}
+
 .content {
    display: flex;
    flex-direction: column;
+   background-color: #12947a;
+   color: #12947a;
    align-items: center;
+   justify-content: center;
    width: 80%;
+   margin-top: 30px;
+   border-radius: 30px;
+}
+
+.back_rect {
+   width: 50%;
+   padding-top: 30px;
+   padding-bottom: 30px;
 }
 
 header {
@@ -61,6 +76,7 @@ form {
    width: 80%;
 
 
+
 }
 
 textarea {
@@ -102,4 +118,8 @@ input {
    -webkit-border-radius: 5px;
    border-radius: 5px;
    height: 30px;
+}
+
+.error {
+   color: white;
 }

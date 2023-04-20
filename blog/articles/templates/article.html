@@ -15,9 +15,25 @@
         <div class="header-block">
             <p class="header-title">Django public blog</p>
         </div>
-        <div class="back_block">
-            <a href="/" class="back_to_main">Все статьи</a>
+        {% if request.user.is_authenticated %}
+        <div class="right-header-block">
+            <div class="back_block">
+                <a href="/" class="back_to_main">Все статьи</a>
+            </div>
         </div>
+        {% else %}
+        <div class="right-header-block">
+            <div class="back_block">
+                <a href="/" class="back_to_main">Все статьи</a>
+            </div>
+            <div class="back_block">
+                <a href="/registration" class="back_to_main">Регистрация</a>
+            </div>
+            <div class="back_block">
+                <a href="/authorisation" class="back_to_main">Авторизация</a>
+            </div>
+        </div>
+        {% endif %}
     </header>
     <div class="archive">
         <h2>{{ post.title }}</h2>

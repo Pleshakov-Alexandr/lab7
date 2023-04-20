@@ -19,13 +19,6 @@ header {
    width: 80%;
    margin-top: 10px;
    display: flex;
-   justify-content: end;
-   align-items: center;
-}
-
-.content_header {
-   width: 65%;
-   display: flex;
    justify-content: space-between;
    align-items: center;
 }
@@ -37,12 +30,21 @@ header {
    align-items: center;
    justify-content: center;
    height: 50%;
+   margin-right: 20px;
 }
 
 .add_post {
    text-decoration: none;
-   padding: 5px;
+   padding: 7px;
    color: #ffffff;
+}
+
+.welcome-block {
+   margin-right: 60px;
+}
+
+.header-text {
+   font-size: 22px;
 }
 
 
@@ -60,13 +62,14 @@ header {
 .back_to_main {
    color: #ffffff;
    text-decoration: underline;
-   font-size: 24px;
+   font-size: 20px;
 }
 
 .back_block {
    display: flex;
    justify-content: center;
    align-items: center;
+   margin-right: 20px;
 }
 
 .header-block {
@@ -79,6 +82,10 @@ header {
 .header-title {
    font-size: 30px;
    text-shadow: 0px 7px 8px black;
+}
+
+.right-header-block {
+   display: flex;
 }
 
 
@@ -102,13 +109,9 @@ header {
 
 .post-title {
    color: #ffffff;
-   text-decoration: none;
 
 }
 
-.post-title :hover {
-   text-decoration: underline;
-}
 
 .article-info {
    display: flex;
@@ -132,4 +135,13 @@ header {
 .logo {
    width: 60px;
    height: 60px;
+}
+
+.navbar {
+   display: flex;
+   align-items: center;
+}
+
+.auto {
+   margin-right: 20px;
 }

@@ -14,14 +14,31 @@
 
 <body>
     <header class="header">
-        <div class="content_header">
-            <div class="header-block">
-                <p class="header-title">Django public blog</p>
+        <div class="header-block">
+            <p class="header-title">Django public blog</p>
+        </div>
+        {% if request.user.is_authenticated %}
+        <div class="navbar">
+            <div class="welcome-block">
+                <p class="welcome-text">Вы авторизированы!</p>
             </div>
             <div class="new_post_block">
-                <a href="/article/new" class="add_post">Создать статью</a>
+                <a href="/article/new" class="add_post header-text">Создать статью</a>
+            </div>
+            <div>
+                <a href="/exit" class="post-title header-text">Выход</a>
             </div>
         </div>
+        {% else %}
+        <div class="navbar">
+            <div class="welcome-block">
+                <a href="/authorisation" class="post-title">Авторизация</a>
+            </div>
+            <div>
+                <a href="/registration" class="post-title">Регистрация</a>
+            </div>
+        </div>
+        {% endif %}
     </header>
     <div class="archive">
         {% for post in posts %}
