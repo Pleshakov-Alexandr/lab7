@@ -111,20 +111,15 @@ header {
 
 .post-title {
    color: #ffffff;
-
 }
 
 
 .article-info {
-   display: none;
+   display: flex;
    justify-content: space-between;
    margin-top: 5px;
    margin-bottom: 5px;
    font-family: Roboto;
-}
-
-.one-post.folded .article-info {
-   display: flex;
 }
 
 .article-author {
@@ -137,22 +132,6 @@ header {
    margin-right: 20px;
    display: block;
 
-}
-
-.article-text {
-   display: none;
-}
-
-.one-post.folded .article-text {
-   display: block;
-}
-
-.fold-button {
-   border: none;
-   background-color: transparent;
-   color: #ffffff;
-   text-decoration: underline;
-   cursor: pointer;
 }
 
 .logo {
